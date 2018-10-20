@@ -1,0 +1,81 @@
+
+
+Random is generated mixing styles and images. Php function is : 
+
+<body style="<?php echo  brqx_social_random_css() ; ?> class="<?php echo $body_classes; ?>
+
+function brqx_social_random_css()
+
+{
+
+//background-image:url('files/images/fondos/Bg001.jpg');background-color: #A8BFC5;
+
+$cadena_destino ='';
+
+$cadena_destino.="background-image:url('http://social.abrqx.com/files/images/fondos/Bg0";
+
+$posicion_random=brqx_random();
+
+$color_social=brqx_dame_color_social($posicion_random);
+
+$cadena_destino.=$posicion_random . '.jpg\');background-color: #' .  $color_social . ';';
+
+return $cadena_destino;
+
+}
+
+function brqx_dame_color_social($posicion_random_pasada)
+
+{
+
+    $colores_socialidad['00']='EFE7EB';
+
+    $colores_socialidad['01']='A8BFC5';
+
+    $colores_socialidad['02']='B1B0C7';
+
+    $colores_socialidad['03']='D8C5C6';
+
+    $colores_socialidad['04']='E4C3D9';
+
+    $colores_socialidad['05']='E3C4DB';
+
+    $colores_socialidad['06']='FFE3BA';
+
+    $colores_socialidad['07']='F8E7C4';
+
+    $colores_socialidad['08']='F8D6DB';
+
+    $colores_socialidad['09']='91B8E0';
+
+    $colores_socialidad['10']='A8B08B';
+
+    $colores_socialidad['11']='CCEDE9';
+
+    $colores_socialidad['12']='B2FFFF';
+
+    $colores_socialidad['13']='E5C8B3';
+
+    $colores_socialidad['14']='FFF2EB';
+
+    $colores_socialidad['15']='EBDBB4';
+
+    return $colores_socialidad[$posicion_random_pasada];
+
+}
+
+function brqx_random()
+
+{
+
+    $valor_final='';
+
+    $valor=rand(0,15);
+
+    if (strlen($valor) <2) $valor_final='0' ;
+
+    $valor_final.=$valor;
+
+    return $valor_final;
+
+}
