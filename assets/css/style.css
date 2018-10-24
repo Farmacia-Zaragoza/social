@@ -20,18 +20,22 @@ html:first-child .PageBackgroundGlare {
 }
 
 .social-wrapper{
-  width: 960px;
-  height: auto;
-  margin: 0px auto;
-  padding: 25px;
-  background-color: rgb(253,253,252);
-  box-shadow: 0px 3px 6px #000;
+    width: 960px;
+    height: auto;
+    margin: 0px auto;
+    padding: 10px 25px;
+    background-color: rgb(253,253,252);
+    box-shadow: 0px 3px 6px #000;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /*header-top area START*/
 #header-areas-top{
   overflow: hidden;
-  margin: 15px 0px;
+  margin: 0px 0px;
 }
 .header-areas-top{}
 .header-area-top-wrapper{
@@ -84,9 +88,9 @@ padding: 4px 20px 4px 4px;
     position: relative;
 }
 .scroll-inner-container{
-    height: -moz-calc(70vh + 0px);
-    height: -webkit-calc(70vh + 0px);
-    height: calc(70vh + 0px);
+    height: -moz-calc(100px + 0px);
+    height: -webkit-calc(100px + 0px);
+    height: calc(100px + 0px);
     overflow: auto;
 }
 .social-image-area{
@@ -112,10 +116,10 @@ padding: 4px 20px 4px 4px;
 
 /* Language Section */
 .lang-grand{
-  margin-top: 50px;
+  margin-top: 35px;
   position: relative;
   overflow: hidden;
-  padding-bottom: 50px;
+  padding-bottom: 15px;
 }
 .container .lang-grand {
     position: relative;
@@ -373,7 +377,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf7da4', end
 .accordian{}
 .accordion:hover .accordion-item:hover .accordion-item-content,
 .accordion .accordion-item--default .accordion-item-content {
-    height: 56px;
+    height: 45px;
 }
 
 .accordion-item-content,

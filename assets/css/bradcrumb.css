@@ -1,6 +1,6 @@
 
 #header_breadcrumb_section{	
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 }
 .breadcrump_wrapper{
 	background-color: lightgray;
@@ -21,7 +21,7 @@
     margin-right: 20px;
     display: inline-block;
     text-decoration: none;
-    padding: 10px 10px 10px 10px;
+    padding: 5px;
 }
 
 .breadcrump_wrapper ul li a img{
