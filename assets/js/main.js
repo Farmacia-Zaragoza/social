@@ -607,15 +607,85 @@ function bradcrumbWidth(){
     });
 
 }
+// init bradcrumbWidth functions
 bradcrumbWidth();
 
 
 
 
+// canculate height for all devices
+// ---------------------------------
+// calculate height of sections (header-areas-top)
+//---------------------------------------------
+function sectionHeight(){
+    // variable initialize
+    let headerAresTopHeight, headerBreadcrumbSectionHeight, mainTextContainerHeight, langGrandHeight, accordianHeight, socialWrapperHeight,viewPortHeight = 0;
+    // sections ID initializations
+    let viewHeight = window.innerHeight;
+    let socialWrapperHeightId = document.getElementById('social_wrapper');
+    let headerAresTopHeightId = document.getElementById('header-areas-top');
+    let headerBreadcrumbSectionHeightId = document.getElementById('header_breadcrumb_section');
+    let mainTextContainerHeightId = document.getElementsByClassName('scroll-inner-container');
+    let langGrandHeightId = document.getElementById('lang-ground-flag');
+    let accordianHeightId = document.getElementById('accordian');
+    // sections height measurement
+    socialWrapperHeight = $(socialWrapperHeightId).height(viewHeight);
 
 
 
 
+    headerAresTopHeight = $(headerAresTopHeightId).height();
+    headerBreadcrumbSectionHeight = $(headerBreadcrumbSectionHeightId).height();
+    langGrandHeight = $(langGrandHeightId).height();
+    accordianHeight = $(accordianHeightId).height();
+
+    /* i need dynamic main-text-cntainer-height so 
+    first we do substruct all height from "viewheight" except (main_text_container)
+    */
+
+   let calculatedHeight = headerAresTopHeight+headerBreadcrumbSectionHeight +langGrandHeight+accordianHeight;
+   let main_text_container = viewHeight - calculatedHeight;
+
+   mainTextContainerHeight = $(mainTextContainerHeightId).height(main_text_container-50);
+
+//    console.log('main_text_container : '+ calculatedHeight);
+//     console.log('viewHeight height : '+ viewHeight);
+//     console.log('socialWrapperHeight height : '+ socialWrapperHeight);
+//     console.log('headerAresTopHeight height : '+ headerAresTopHeight);
+//     console.log('headerBreadcrumbSectionHeight height : '+ headerBreadcrumbSectionHeight);
+//     console.log('mainTextContainerHeight height : '+ mainTextContainerHeight);
+//     console.log('langGrandHeight height : '+ langGrandHeight);
+//     console.log('accordianHeight height : '+ accordianHeight);
+}
+
+sectionHeight();
+$(window).resize(function(){
+    sectionHeight();
+});
+// init function for calculating height header top area
+
+
+// calculate height of sections (header_breadcrumb_section)
+//---------------------------------------------------------
+// function headerBreadcrumbSectionHeight(){
+//     let sectionHeight = 0;
+//     let sectionId = document.getElementById('header_breadcrumb_section');
+//     sectionHeight = $(sectionId).height();
+//     console.log('header_breadcrumb_section : '+ sectionHeight);
+// }
+// init height of section header_breadcrumb_section
+// -------------------------------------------------
+// headerBreadcrumbSectionHeight();
+
+// calculating height of section (main_text_container)
+// ----------------------------------------------------
+// function mainTextContainerHeight(){
+//     let sectionHeight = 0;
+//     let sectionId = document.getElementsByClassName('scroll-inner-container');
+//     sectionHeight = $(sectionId).height();
+//     console.log('scroll-inner-container : '+ sectionHeight);
+// }
+// mainTextContainerHeight();
 
 
 
