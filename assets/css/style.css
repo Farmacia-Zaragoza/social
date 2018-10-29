@@ -26,11 +26,6 @@ html:first-child .PageBackgroundGlare {
     padding: 10px 25px;
     background-color: rgb(253,253,252);
     box-shadow: 0px 3px 6px #000;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
 
 /*header-top area START*/
 #header-areas-top{
