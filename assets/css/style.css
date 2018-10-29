@@ -90,9 +90,9 @@ padding: 4px 20px 4px 4px;
 }
 /*header-top area END*/
 #main_text_container{
-  height: 50%;
-  max-height: 60%;
-  min-height: 30%;
+  height: 45%;
+  max-height: 600px;
+  min-height: 300px;
 }
 .scroll-outer-container{
   height: 100%
