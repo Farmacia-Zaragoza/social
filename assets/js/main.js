@@ -648,19 +648,11 @@ function sectionHeight(){
 
    mainTextContainerHeight = $(mainTextContainerHeightId).height(main_text_container-50);
 
-//    console.log('main_text_container : '+ calculatedHeight);
-//     console.log('viewHeight height : '+ viewHeight);
-//     console.log('socialWrapperHeight height : '+ socialWrapperHeight);
-//     console.log('headerAresTopHeight height : '+ headerAresTopHeight);
-//     console.log('headerBreadcrumbSectionHeight height : '+ headerBreadcrumbSectionHeight);
-//     console.log('mainTextContainerHeight height : '+ mainTextContainerHeight);
-//     console.log('langGrandHeight height : '+ langGrandHeight);
-//     console.log('accordianHeight height : '+ accordianHeight);
 }
 
-sectionHeight();
+// sectionHeight();
 $(window).resize(function(){
-    sectionHeight();
+    // sectionHeight();
 });
 // init function for calculating height header top area
 
