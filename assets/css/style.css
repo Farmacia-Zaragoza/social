@@ -56,9 +56,11 @@ html:first-child .PageBackgroundGlare {
 .header-flag-image-right{
   width: 20%;
   float: right;
+  position: relative;
 }
 .header-flag-image-right img{
   float: right;
+  width: 100%;
 }
 .header-social-icon > a > span > i{
   font-size: 18px;
