@@ -1,1 +1,46 @@
+.lang-select-for-mobile {
 
+}
+
+.lang-select-inner-wrapper {
+    position: relative;
+}
+
+.lang-select-inner-wrapper ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    overflow: hidden;
+    overflow-y: scroll;
+    object-fit: cover;
+    text-align: center;
+    height: calc(300px + 0px);
+}
+.lang-select-for-mobile {
+    text-align: center;
+    position: absolute;
+    right: 17px;
+    z-index: 1;
+    width: 20%;
+    top: 140px;
+    background-color: green;
+}
+.mobile-select-arrow-up,
+.mobile-select-arrow-down{
+	font-size: 18px;
+	padding: 5px 0px;
+	font-weight: 800;
+	cursor: pointer;
+	display: block;
+}
+
+.lang-select-inner-wrapper > ul > li > a > img {
+    width: 100%;
+}
+.lang-select-inner-wrapper > ul::-webkit-scrollbar { 
+  display: none;
+  position: absolute;
+}
+.lang-select-inner-wrapper > ul > li {
+    padding: 10px;
+}
