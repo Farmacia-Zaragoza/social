@@ -84,173 +84,173 @@
  
 
         /* Flag or Language Section Start */
-        
-            ! function() {
-                 if ($("body").hasClass("page-id-homepage")) {
 
-                     var active_top = $(".lang-container a.active").position().top;
-                     var active_left = $(".lang-container a.active").position().left;
-                     var scrollSpeed = 10;
-                     $(document).ready(function() {
-                        
-                         $(".lang-container .ellipse").css("transform", "translateX(" + active_left + "px" + ")");
+    ! function() {
+         if ($("body").hasClass("page-id-homepage")) {
+
+             var active_top = $(".lang-container a.active").position().top;
+             var active_left = $(".lang-container a.active").position().left;
+             var scrollSpeed = 10;
+             $(document).ready(function() {
+                
+                 $(".lang-container .ellipse").css("transform", "translateX(" + active_left + "px" + ")");
+                 
+                 if (!userAgent.isTouchDevice()) {
+                    //mouseenter on a flag
+                     $(".lang-container .pop-container-L").mouseenter(function() {
                          
-                         if (!userAgent.isTouchDevice()) {
-                            //mouseenter on a flag
-                             $(".lang-container .pop-container-L").mouseenter(function() {
-                                 
-                                 var left = $(this).position().left + $(".lang-container .flags").scrollLeft();
-                                 $(".lang-container .ellipse").css("transform", "translateX(" + left + "px" + ")");
-                                 
-                             });
+                         var left = $(this).position().left + $(".lang-container .flags").scrollLeft();
+                         $(".lang-container .ellipse").css("transform", "translateX(" + left + "px" + ")");
+                         
+                     });
 
-                             //mouseleave from flags 
-                             $(".lang-container .flags").mouseleave(function() {
+                     //mouseleave from flags 
+                     $(".lang-container .flags").mouseleave(function() {
 
-                                active_left = $(".lang-container a.active").position().left + $(".lang-container .flags").scrollLeft();
+                        active_left = $(".lang-container a.active").position().left + $(".lang-container .flags").scrollLeft();
 
-                                $(".lang-container .ellipse").css("transform", "translateX(" + active_left + "px" + ")");
-                                 
-                             });
-                             
-                             //mouseenter on right-arrow
-                             $(".lang-grand .arrow-right > svg.arrow").on("mouseenter", function() {
+                        $(".lang-container .ellipse").css("transform", "translateX(" + active_left + "px" + ")");
+                         
+                     });
+                     
+                     //mouseenter on right-arrow
+                     $(".lang-grand .arrow-right > svg.arrow").on("mouseenter", function() {
 
-                                 var remLength = $(".lang-container .flags")[0].scrollWidth - $(".lang-container .flags").width();
-                                 var scrollableLength = remLength - $(".lang-container .flags").scrollLeft();
+                         var remLength = $(".lang-container .flags")[0].scrollWidth - $(".lang-container .flags").width();
+                         var scrollableLength = remLength - $(".lang-container .flags").scrollLeft();
 
-                                 $(".lang-container .flags").animate({
-                                     scrollLeft: remLength
-                                 }, scrollSpeed * scrollableLength);
+                         $(".lang-container .flags").animate({
+                             scrollLeft: remLength
+                         }, scrollSpeed * scrollableLength);
 
-                                 $(".lang-container .ellipse").animate({
-                                     left: parseFloat($(".lang-container .ellipse").css("left")) - scrollableLength + "px"
-                                 }, scrollSpeed * scrollableLength);
+                         $(".lang-container .ellipse").animate({
+                             left: parseFloat($(".lang-container .ellipse").css("left")) - scrollableLength + "px"
+                         }, scrollSpeed * scrollableLength);
 
-                             });
+                     });
 
-                             //mouseenter on left-arrow
-                             $(".lang-grand .arrow-left > svg.arrow").on("mouseenter", function() {
+                     //mouseenter on left-arrow
+                     $(".lang-grand .arrow-left > svg.arrow").on("mouseenter", function() {
 
-                                 var remLength = $(".lang-container .flags")[0].scrollWidth - $(".lang-container .flags").width();
-                                 var scrollableLength = remLength - $(".lang-container .flags").scrollLeft();
+                         var remLength = $(".lang-container .flags")[0].scrollWidth - $(".lang-container .flags").width();
+                         var scrollableLength = remLength - $(".lang-container .flags").scrollLeft();
 
-                                 $(".lang-container .flags").animate({
-                                     scrollLeft: 0
-                                 }, scrollSpeed * $(".lang-container .flags").scrollLeft());
+                         $(".lang-container .flags").animate({
+                             scrollLeft: 0
+                         }, scrollSpeed * $(".lang-container .flags").scrollLeft());
 
-                                 $(".lang-container .ellipse").animate({
-                                     left: parseFloat($(".lang-container .ellipse").css("left")) + $(".lang-container .flags").scrollLeft() + "px"
-                                 }, scrollSpeed * $(".lang-container .flags").scrollLeft());
+                         $(".lang-container .ellipse").animate({
+                             left: parseFloat($(".lang-container .ellipse").css("left")) + $(".lang-container .flags").scrollLeft() + "px"
+                         }, scrollSpeed * $(".lang-container .flags").scrollLeft());
 
-                             });
+                     });
 
-                             //mouseleave from any arrow
-                             $(".lang-grand svg.arrow").mouseleave(function() {
-                                 $(".lang-container .flags").stop();
-                                 $(".lang-container .ellipse").stop();
-                             });
+                     //mouseleave from any arrow
+                     $(".lang-grand svg.arrow").mouseleave(function() {
+                         $(".lang-container .flags").stop();
+                         $(".lang-container .ellipse").stop();
+                     });
+
+                 } else {
+
+                     var running = false;
+                     function stopAnimation() {
+                        $(".lang-container .flags").stop();
+                         $(".lang-container .ellipse").stop();
+                         running = false;
+                     }
+
+                    
+                    // mouse inter on svg arrow left START
+                     $(".lang-grand .arrow-right > svg.arrow").on("click", function() {
+
+                         if (running == false) {
+
+                             var remLength = $(".lang-container .flags")[0].scrollWidth - $(".lang-container .flags").width();
+                             var scrollableLength = remLength - $(".lang-container .flags").scrollLeft();
+
+                             $(".lang-container .flags").animate({
+                                 scrollLeft: remLength
+                             }, scrollSpeed * scrollableLength, stopAnimation);
+
+                             $(".lang-container .ellipse").animate({
+                                 left: parseFloat($(".lang-container .ellipse").css("left")) - scrollableLength + "px"
+                             }, scrollSpeed * scrollableLength);
+                             running = true;
 
                          } else {
-
-                             var running = false;
-                             function stopAnimation() {
-                                $(".lang-container .flags").stop();
-                                 $(".lang-container .ellipse").stop();
-                                 running = false;
-                             }
-
-                            
-                            // mouse inter on svg arrow left START
-                             $(".lang-grand .arrow-right > svg.arrow").on("click", function() {
-
-                                 if (running == false) {
-
-                                     var remLength = $(".lang-container .flags")[0].scrollWidth - $(".lang-container .flags").width();
-                                     var scrollableLength = remLength - $(".lang-container .flags").scrollLeft();
-
-                                     $(".lang-container .flags").animate({
-                                         scrollLeft: remLength
-                                     }, scrollSpeed * scrollableLength, stopAnimation);
-
-                                     $(".lang-container .ellipse").animate({
-                                         left: parseFloat($(".lang-container .ellipse").css("left")) - scrollableLength + "px"
-                                     }, scrollSpeed * scrollableLength);
-                                     running = true;
-
-                                 } else {
-                                     stopAnimation();
-                                 }
-
-                             });
-                             // mouse inter on svg arrow left END
-                             // mouse inter on svg arrow RIGHT START
-                             $(".lang-grand .arrow-left > svg.arrow").on("click", function() {
-
-                                 if (running == false) {
-
-                                     var remLength = $(".lang-container .flags")[0].scrollWidth - $(".lang-container .flags").width();
-                                     var scrollableLength = remLength - $(".lang-container .flags").scrollLeft();
-
-                                     $(".lang-container .flags").animate({
-                                         scrollLeft: 0
-                                     }, scrollSpeed * $(".lang-container .flags").scrollLeft(), stopAnimation);
-
-                                     $(".lang-container .ellipse").animate({
-                                         left: parseFloat($(".lang-container .ellipse").css("left")) + $(".lang-container .flags").scrollLeft() + "px"
-                                     }, scrollSpeed * $(".lang-container .flags").scrollLeft());
-                                     running = true;
-
-                                 } else {
-                                     stopAnimation();
-                                 }
-
-                             });
-
-                            // mouse inter on svg arrow right END
-
+                             stopAnimation();
                          }
 
-
                      });
+                     // mouse inter on svg arrow left END
+                     // mouse inter on svg arrow RIGHT START
+                     $(".lang-grand .arrow-left > svg.arrow").on("click", function() {
 
-                     //-----------------             
+                         if (running == false) {
 
-                     //for caption
-                     $(".lang-container .pop-container-L").each(function() {
-                         var $caption = $(this).data("caption");
-                         if(viewPortWidth >= 768){
-                            $("body").append(
-                                 '<span class="link-description lang">' +
-                                 '<span class="inverse-skew">' +
-                                 $caption +
-                                 '</span>' +
-                                 '</span>'
-                             );
+                             var remLength = $(".lang-container .flags")[0].scrollWidth - $(".lang-container .flags").width();
+                             var scrollableLength = remLength - $(".lang-container .flags").scrollLeft();
+
+                             $(".lang-container .flags").animate({
+                                 scrollLeft: 0
+                             }, scrollSpeed * $(".lang-container .flags").scrollLeft(), stopAnimation);
+
+                             $(".lang-container .ellipse").animate({
+                                 left: parseFloat($(".lang-container .ellipse").css("left")) + $(".lang-container .flags").scrollLeft() + "px"
+                             }, scrollSpeed * $(".lang-container .flags").scrollLeft());
+                             running = true;
+
+                         } else {
+                             stopAnimation();
                          }
+
                      });
 
-                     //caption on hover
-                     $(".lang-container .pop-container-L").hover(function() {
-                         var left = $(this).offset().left;
-                         var top = $(this).offset().top;
-                         var pos = $(this).index();
-                         var ele = $("body > .lang.link-description").eq(pos);
-                         top = top - 35;
-                         ele.css({
-                                 top: top + "px",
-                                 left: left + "px"
-                             })
-                             .addClass("active");
-                     }, function() {
-                         var pos = $(this).index();
-                         $("body > .lang.link-description").eq(pos).removeClass("active");
-                     });
-
-
+                    // mouse inter on svg arrow right END
 
                  }
-             }();
+
+
+             });
+
+             //-----------------             
+
+             //for caption
+             $(".lang-container .pop-container-L").each(function() {
+                 var $caption = $(this).data("caption");
+                 if(viewPortWidth >= 768){
+                    $("body").append(
+                         '<span class="link-description lang">' +
+                         '<span class="inverse-skew">' +
+                         $caption +
+                         '</span>' +
+                         '</span>'
+                     );
+                 }
+             });
+
+             //caption on hover
+             $(".lang-container .pop-container-L").hover(function() {
+                 var left = $(this).offset().left;
+                 var top = $(this).offset().top;
+                 var pos = $(this).index();
+                 var ele = $("body > .lang.link-description").eq(pos);
+                 top = top - 35;
+                 ele.css({
+                         top: top + "px",
+                         left: left + "px"
+                     })
+                     .addClass("active");
+             }, function() {
+                 var pos = $(this).index();
+                 $("body > .lang.link-description").eq(pos).removeClass("active");
+             });
+
+
+
+         }
+     }();
 
 
         /* Flag or Language Section End */
