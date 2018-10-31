@@ -144,7 +144,7 @@ li.traiangle_hover{
     width: 700px;
     z-index: 1;
     background-color: #FFE3BA;
-    text-align: -webkit-center;
+    text-align: center;
     height: 200px;
     display: table;
     border: 1px solid #000;
