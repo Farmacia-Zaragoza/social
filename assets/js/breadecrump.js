@@ -15,6 +15,10 @@ $(function(){
 	makeId();
 
 //=======================================================================
+/*artical dropdown menu start. "_verticalSlideUp()" function used for 
+making scroll vertically up-side, when hover on down arrow... 
+it will sliding up-side*/
+
 	function _verticalSlideUp(){
 		$('.artical_inner_menu_wrapper ul').each(function(){
 			let id = makeId();
@@ -147,6 +151,14 @@ $(function(){
 			div.stop();
 		}
 	});
+
+
+
+
+
+// this function is used for mobile flag combo 
+// it will visible only for mobile
+//=======================================================================
 
 
 
