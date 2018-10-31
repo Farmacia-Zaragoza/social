@@ -37,7 +37,7 @@
     background-color: #DCB691;
 }
 .lang-select-inner-wrapper > ul > li > a > img {
-    width: 100%;
+    width: 85%;
 }
 .lang-select-inner-wrapper > ul::-webkit-scrollbar { 
   display: none;
