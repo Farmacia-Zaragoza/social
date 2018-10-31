@@ -193,7 +193,7 @@ it will sliding up-side*/
 		}
 	});
 // ===================================================================
-// when i hover mouse on scroll icon in lower side then slide goes down-side
+// when i hover mouse on scroll icon in lower side then slide goes down-side (for mobile flag combo)
 	function _verticalSlideDown4(){
 		$('.lang-select-inner-wrapper ul').each(function(){
 			let id = makeId();
@@ -216,9 +216,17 @@ it will sliding up-side*/
 		});
 	}
 
+	$('.mobile-select-arrow-down').on({
+		mouseenter: function(){
+			_verticalSlideDown4();
+		},
+		mouseleave: function(){
+			let div = $('.lang-select-inner-wrapper ul');
+			div.stop();
+		}
+	});
 
-
-
+// ============================================================
 
 
 
