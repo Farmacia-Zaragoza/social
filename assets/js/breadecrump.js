@@ -192,8 +192,35 @@ it will sliding up-side*/
 			div.stop();
 		}
 	});
+// ===================================================================
+// when i hover mouse on scroll icon in lower side then slide goes down-side
+	function _verticalSlideDown4(){
+		$('.lang-select-inner-wrapper ul').each(function(){
+			let id = makeId();
+			$(this).attr('id',id);
+			var div = $(this);
+			var _verticalHeight = $('.lang-select-inner-wrapper ul').height();
+			var scrollHeight = div[0].scrollHeight;
+			var remainHeight = scrollHeight - _verticalHeight;
+			var scrollableHeight = remainHeight - div.scrollTop();
+			var position = div.scrollTop();
+			var remainingTime = (position * 100) / 5 ; //speed 5
+			div.stop();
+			div.animate({
+				scrollTop : 0
+			},{
+				duration : remainingTime,
+				easing: "linear",
+			});
 
-	
+		});
+	}
+
+
+
+
+
+
 
 
 
