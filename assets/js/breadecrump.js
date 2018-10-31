@@ -160,6 +160,40 @@ it will sliding up-side*/
 // it will visible only for mobile
 //=======================================================================
 
+	function _verticalSlideUp4(){
+		$('.lang-select-inner-wrapper ul').each(function(){
+			let id = makeId();
+			$(this).attr('id',id);
+			var div = $(this);
+			var _verticalHeight = $('.lang-select-inner-wrapper ul').height();
+			var scrollHeight = div[0].scrollHeight;
+			var remainHeight = scrollHeight - _verticalHeight;
+			var scrollableHeight = remainHeight - div.scrollTop();
+			var position = div.scrollTop();
+			var remainingTime = (remainHeight - position) * 100 / 5 ; //speed 5
+			div.stop();
+			div.animate({
+				scrollTop : remainHeight
+			},{
+				duration : remainingTime,
+				easing: "linear",
+			});
+
+		});
+	}
+
+	// when i hover upper icon slide take up-side
+		$('.mobile-select-arrow-up').on({
+		mouseenter: function(){
+			_verticalSlideUp4();
+		},
+		mouseleave: function(){
+			let div = $('.lang-select-inner-wrapper ul');
+			div.stop();
+		}
+	});
+
+	
 
 
 
