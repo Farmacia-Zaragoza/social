@@ -572,9 +572,6 @@ function countString(){
 // init calculations string length functions
 countString();
 
-
-
-
 // calculate width of bradcrumb visibal area
 
 function bradcrumbWidth(){
