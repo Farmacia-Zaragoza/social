@@ -37,7 +37,7 @@ html:first-child .PageBackgroundGlare {
 }
 /*header-top area START*/
 #header-areas-top{
-  overflow: hidden;
+  /*overflow: hidden;*/
   margin: 0px 0px;
 }
 .header-areas-top{}
@@ -53,13 +53,29 @@ html:first-child .PageBackgroundGlare {
   width: 80%;
 }
 .header-social-icon{}
+
+/*header right area start
+=====================================================
+*/
 .header-flag-image-right{
   width: 20%;
   float: right;
+}
+.header-flag-image-right ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
   position: relative;
 }
-.header-flag-image-right img{
+.header-flag-image-right > ul > li{
+display: inline-block;
+}
+.header-flag-image-right{
   float: right;
+  width: 20%;
+  position: relative;
+}
+.header-flag-image-right ul li a img{
   width: 100%;
 }
 .header-social-icon > a > span > i{
