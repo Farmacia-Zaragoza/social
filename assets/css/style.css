@@ -75,8 +75,11 @@ display: inline-block;
   width: 20%;
   position: relative;
 }
+.header-flag-image-right ul li a{
+  display: inline-block;
+}
 .header-flag-image-right ul li a img{
-  width: 100%;
+  width: 79%;
 }
 .header-social-icon > a > span > i{
   font-size: 18px;
