@@ -32,6 +32,9 @@ html:first-child .PageBackgroundGlare {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.social-wrapper.dark-background{
+  background-color: rgba(0,0,0,.6);
+}
 #social_wrapper{
 
 }
