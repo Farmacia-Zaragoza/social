@@ -595,7 +595,10 @@ bradcrumbWidth();
 //dark background when hover or click on 
 // (lang-select-flag-combo)
 // --------------------------------------
-
+ $('.header-flag-image-right').hover(function(){
+    $('#social_wrapper').toggleClass('dark-background');
+    
+ });
 
  
 
