@@ -596,7 +596,7 @@ bradcrumbWidth();
 // (lang-select-flag-combo)
 // --------------------------------------
  $('.header-flag-image-right').hover(function(){
-    $('#social_wrapper').toggleClass('dark-background');
+    $('.background-changes').toggleClass('dark-background');
     
  });
 
