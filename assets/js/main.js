@@ -597,6 +597,8 @@ bradcrumbWidth();
 // --------------------------------------
  $('.header-flag-image-right').hover(function(){
     $('.background-changes').toggleClass('dark-background');
+
+    $('.social-wrapper').toggleClass('dark-inner-background');
     
  });
 
