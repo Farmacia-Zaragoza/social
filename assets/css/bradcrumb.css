@@ -26,12 +26,14 @@
 	display: inline-block;
 }
 .breadcrump_wrapper > ul > li > a{
-    font-size: 21px;
+	font-size: 21px;
     color: green;
     margin-right: 20px;
     display: inline-block;
     text-decoration: none;
     padding: 5px;
+    text-transform: capitalize;
+    padding-left: 15px;
 }
 
 .breadcrump_wrapper ul li a img{
