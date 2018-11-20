@@ -54,7 +54,7 @@ html:first-child .PageBackgroundGlare {
 .header-areas-top{}
 .header-area-top-wrapper{
   clear: both;
-  padding: 10px 0px;
+  padding: 10px 0px 20px 0px;
 }
 .header-logo-image-left{
   width: 20%;
