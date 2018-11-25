@@ -590,6 +590,18 @@ bradcrumbWidth();
 
 
 
+// canculate height for all devices
+// ---------------------------------
+// calculate height of sections (header-areas-top)
+//---------------------------------------------
+
+
+
+
+
+
+
+
 
 
 //dark background when hover or click on 
