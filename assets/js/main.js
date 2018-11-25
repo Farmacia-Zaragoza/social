@@ -617,7 +617,7 @@ function sectionHeight(){
     let calculatedHeight = headerAresTopHeight+headerBreadcrumbSectionHeight +langGrandHeight+accordianHeight;
    let main_text_container = viewHeight - calculatedHeight;
     mainTextContainerHeight = $(mainTextContainerHeightId).css({
-        'height'    : 45+'%',
+        
         'max-height' : main_text_container-50,
         'min-height' : 300+'px'
     });
