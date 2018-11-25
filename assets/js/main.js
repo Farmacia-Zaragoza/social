@@ -590,6 +590,7 @@ bradcrumbWidth();
 
 
 
+
 // canculate height for all devices
 // ---------------------------------
 // calculate height of sections (header-areas-top)
@@ -602,7 +603,7 @@ function sectionHeight(){
     let socialWrapperHeightId = document.getElementById('social_wrapper');
     let headerAresTopHeightId = document.getElementById('header-areas-top');
     let headerBreadcrumbSectionHeightId = document.getElementById('header_breadcrumb_section');
-    let mainTextContainerHeightId = document.getElementsByClassName('scroll-inner-container');
+    let mainTextContainerHeightId = document.getElementById('main_text_container');
     let langGrandHeightId = document.getElementById('lang-ground-flag');
     let accordianHeightId = document.getElementById('accordian');
     // sections height measurement
@@ -618,8 +619,9 @@ function sectionHeight(){
    let main_text_container = viewHeight - calculatedHeight;
     mainTextContainerHeight = $(mainTextContainerHeightId).css({
         
-        'max-height' : main_text_container-50,
-        'min-height' : 300+'px'
+        'max-height' : main_text_container-80+'px',
+        'min-height' : 300+'px',
+        'height' : 45+'%'
     });
 
 }
@@ -628,6 +630,7 @@ sectionHeight();
 $(window).resize(function(){
     sectionHeight();
 });
+
 
 
 
