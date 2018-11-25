@@ -123,9 +123,7 @@ padding: 4px 20px 4px 4px;
 }
 /*header-top area END*/
 #main_text_container{
-/*  height: 45%;*/
-/*  max-height: 600px;
-  min-height: 300px;*/
+  height: 45%;
 }
 
 .scroll-outer-container{
