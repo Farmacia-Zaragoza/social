@@ -619,9 +619,8 @@ function sectionHeight(){
    let main_text_container = viewHeight - calculatedHeight;
     mainTextContainerHeight = $(mainTextContainerHeightId).css({
         
-        'max-height' : main_text_container-80+'px',
-        'min-height' : 300+'px',
-        'height' : 45+'%'
+        'min-height' : main_text_container-80+'px',
+        'max-height' : 300+'px'
     });
 
 }
