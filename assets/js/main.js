@@ -594,7 +594,40 @@ bradcrumbWidth();
 // ---------------------------------
 // calculate height of sections (header-areas-top)
 //---------------------------------------------
+function sectionHeight(){
+    // variable initialize
+    let headerAresTopHeight, headerBreadcrumbSectionHeight, mainTextContainerHeight, langGrandHeight, accordianHeight, socialWrapperHeight,viewPortHeight = 0;
+    // sections ID initializations
+    let viewHeight = window.innerHeight;
+    let socialWrapperHeightId = document.getElementById('social_wrapper');
+    let headerAresTopHeightId = document.getElementById('header-areas-top');
+    let headerBreadcrumbSectionHeightId = document.getElementById('header_breadcrumb_section');
+    let mainTextContainerHeightId = document.getElementsByClassName('scroll-inner-container');
+    let langGrandHeightId = document.getElementById('lang-ground-flag');
+    let accordianHeightId = document.getElementById('accordian');
+    // sections height measurement
+    socialWrapperHeight = $(socialWrapperHeightId).height();
+     headerAresTopHeight = $(headerAresTopHeightId).height();
+    headerBreadcrumbSectionHeight = $(headerBreadcrumbSectionHeightId).height();
+    langGrandHeight = $(langGrandHeightId).height();
+    accordianHeight = $(accordianHeightId).height();
+     /* i need dynamic main-text-cntainer-height so 
+    first we do substruct all height from "viewheight" except (main_text_container)
+    */
+    let calculatedHeight = headerAresTopHeight+headerBreadcrumbSectionHeight +langGrandHeight+accordianHeight;
+   let main_text_container = viewHeight - calculatedHeight;
+    mainTextContainerHeight = $(mainTextContainerHeightId).css({
+        'height'    : 45+'%',
+        'max-height' : main_text_container-50,
+        'min-height' : 300+'px'
+    });
 
+}
+
+sectionHeight();
+$(window).resize(function(){
+    sectionHeight();
+});
 
 
 
