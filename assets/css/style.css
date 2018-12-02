@@ -465,7 +465,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf7da4', end
 }
 .accordion-item > a{
   border-radius: 10px;
+  position: relative;
 }
+
 .accordion .accordion-item:nth-child(1) > a{
   background: #ce847e;
 background: -moz-linear-gradient(top, #ce847e 0%, #ba6b66 49%, #ce847e 100%);
@@ -492,8 +494,17 @@ background: -webkit-linear-gradient(top, rgba(207,125,164,1) 0%,rgba(201,90,142,
 background: linear-gradient(to bottom, rgba(207,125,164,1) 0%,rgba(201,90,142,0.99) 50%,rgba(207,125,164,0.97) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf7da4', endColorstr='#f7cf7da4',GradientType=0 );
 }
+
 .accordion-item a i.fa-circle-o{
   color: #fff;
+  display: block;
 }
+.accordion .accordion-item:nth-child(even) > a{
+  padding: 10px;
+}
+.accordion .accordion-item:nth-child(even) > a i.fa-circle-o{
+
+}
+.accordion .accordion-item:nth-child(odd) > a i.fa-circle-o{}
 
 /*accordion style-2 end here*/
