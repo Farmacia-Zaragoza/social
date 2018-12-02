@@ -360,7 +360,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf7da4', end
     height: 50px;
 }*/
 .content-warapper {
-    background-color: #D0DEEE;
+    /*background-color: #D0DEEE;*/
     position: relative;
 }
 
@@ -445,9 +445,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf7da4', end
 }
 
 .accordion .accordion-item {
-  background-image: linear-gradient(90deg, #eee, #f5f5f5, #eee);
-  /*border-bottom: 1px solid #666;*/
-  color: #eee;
+    background-image: linear-gradient(90deg, #eee, #f5f5f5, #eee);
+    /* border-bottom: 1px solid #666; */
+    color: #eee;
+    box-shadow: 0px 0px 0px 5px #ededed inset;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 5px;
 }
 
 .accordion h1 {
@@ -459,36 +463,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf7da4', end
   position: relative;
 
 }
-.accordion-item a i.fa-circle-o{
-  color: #fff;
+.accordion-item > a{
+  border-radius: 10px;
 }
-.accordion .accordion-item:nth-child(1) {
-/*background: #ce847e;
+.accordion .accordion-item:nth-child(1) > a{
+  background: #ce847e;
 background: -moz-linear-gradient(top, #ce847e 0%, #ba6b66 49%, #ce847e 100%);
 background: -webkit-linear-gradient(top, #ce847e 0%,#ba6b66 49%,#ce847e 100%);
 background: linear-gradient(to bottom, #ce847e 0%,#ba6b66 49%,#ce847e 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce847e', endColorstr='#ce847e',GradientType=0 );*/
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce847e', endColorstr='#ce847e',GradientType=0 );
 
 }
-
-.accordion .accordion-item:nth-child(2) {
-/*background: -moz-linear-gradient(top, rgba(148,202,111,1) 0%, rgba(73,193,13,0.99) 50%, rgba(148,202,111,0.97) 100%);
+.accordion .accordion-item:nth-child(2) > a{
+background: -moz-linear-gradient(top, rgba(148,202,111,1) 0%, rgba(73,193,13,0.99) 50%, rgba(148,202,111,0.97) 100%);
 background: -webkit-linear-gradient(top, rgba(148,202,111,1) 0%,rgba(73,193,13,0.99) 50%,rgba(148,202,111,0.97) 100%);
 background: linear-gradient(to bottom, rgba(148,202,111,1) 0%,rgba(73,193,13,0.99) 50%,rgba(148,202,111,0.97) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#94ca6f', endColorstr='#f794ca6f',GradientType=0 );*/
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#94ca6f', endColorstr='#f794ca6f',GradientType=0 );
 }
-
-.accordion .accordion-item:nth-child(3) {
-/*background: -moz-linear-gradient(top, rgba(133,194,198,1) 0%, rgba(3,173,196,0.99) 50%, rgba(127,194,198,0.97) 100%);
+.accordion .accordion-item:nth-child(3) > a{
+background: -moz-linear-gradient(top, rgba(133,194,198,1) 0%, rgba(3,173,196,0.99) 50%, rgba(127,194,198,0.97) 100%);
 background: -webkit-linear-gradient(top, rgba(133,194,198,1) 0%,rgba(3,173,196,0.99) 50%,rgba(127,194,198,0.97) 100%);
 background: linear-gradient(to bottom, rgba(133,194,198,1) 0%,rgba(3,173,196,0.99) 50%,rgba(127,194,198,0.97) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85c2c6', endColorstr='#f77fc2c6',GradientType=0 );*/
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85c2c6', endColorstr='#f77fc2c6',GradientType=0 );
 }
-
-.accordion .accordion-item:nth-child(4) {
-/*background: -moz-linear-gradient(top, rgba(207,125,164,1) 0%, rgba(201,90,142,0.99) 50%, rgba(207,125,164,0.97) 100%);
+.accordion .accordion-item:nth-child(4) > a{
+background: -moz-linear-gradient(top, rgba(207,125,164,1) 0%, rgba(201,90,142,0.99) 50%, rgba(207,125,164,0.97) 100%);
 background: -webkit-linear-gradient(top, rgba(207,125,164,1) 0%,rgba(201,90,142,0.99) 50%,rgba(207,125,164,0.97) 100%);
 background: linear-gradient(to bottom, rgba(207,125,164,1) 0%,rgba(201,90,142,0.99) 50%,rgba(207,125,164,0.97) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf7da4', endColorstr='#f7cf7da4',GradientType=0 );*/
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf7da4', endColorstr='#f7cf7da4',GradientType=0 );
 }
+.accordion-item a i.fa-circle-o{
+  color: #fff;
+}
+
 /*accordion style-2 end here*/
